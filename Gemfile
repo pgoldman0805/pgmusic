@@ -47,8 +47,6 @@ gem 'hirb', '0.7.3'
 #use Devise for user authentication
 gem 'devise', '4.2.0'
 
-#use Paperclip for image upload
-gem 'paperclip', '4.3.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
