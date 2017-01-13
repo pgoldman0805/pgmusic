@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   
   root to: 'pages#home'
   get 'about', to:'pages#about'
+  get 'calendar', to:'pages#calendar'
+  resources :contacts, only: :create
+  get 'contact-paul', to:'contacts#new', as:'new-contact'
 end
