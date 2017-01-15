@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'calendar', to:'pages#calendar'
   resources :contacts, only: :create
   get 'contact-paul', to:'contacts#new', as:'new-contact'
+  get 'booking', to:'pages#booking'
 end

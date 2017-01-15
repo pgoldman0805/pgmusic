@@ -4,6 +4,7 @@
     
     <title>PaulGoldmanMusic</title>
     <%= csrf_meta_tags %>
+    <link rel="icon" href="Twitch_AVATAR.ico">
     <link href="https://fonts.googleapis.com/css?family=Exo+2|Kanit|Signika+Negative|Special+Elite" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -21,7 +22,7 @@
           </button>
           <%= link_to root_path, class: "navbar-logo navbar-brand" do %>
             <i class="fa fa-music"></i> 
-            PaulGoldmanMusic
+            Paul<span class="gold">Goldman</span>Music
           <% end %>
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -30,7 +31,7 @@
 
             <li><%= link_to "About Paul", about_path %></li>
             <li><%= link_to "Calendar", calendar_path %></li>
-            <li><%= link_to "Booking", '#' %></li>
+            <li><%= link_to "Booking", booking_path %></li>
             <li><%= link_to "Song List", '#' %></li>
             <li><%= link_to "Lessons", '#' %></li>
             <li><%= link_to "Media", '#' %></li>
@@ -43,5 +44,8 @@
       </div>
     </nav>
     <%= yield %>
+    <footer class="text-center">
+      &#169; 2017 Paul Goldman
+    </footer>
   </body>
 </html>

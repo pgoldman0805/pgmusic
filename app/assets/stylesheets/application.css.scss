@@ -22,6 +22,7 @@
 // Typography styles
 h1, h2, h3 {
   font-family: 'Exo 2', sans-serif;
+  color: white;
 }
 
 // Nav Styles
@@ -36,7 +37,7 @@ h1, h2, h3 {
 .navbar-default .navbar-toggle{
   border:2px solid white;
   &:hover, &:focus{
-    background-color:black;
+    background-color:MidnightBlue;
   }
 }
 
@@ -49,24 +50,27 @@ h1, h2, h3 {
     // background-color: rgba(255,255,230,0.2);
     box-shadow: 1px 0px 6px rgb(0,0,0);
     color:white;
-    opacity:0.75;
+    opacity:0.85;
   }
 }
 
-.navbar-logo :hover{
-  border: 1px solid black;
-}
+// .navbar-logo :hover{
+//   border: 1px solid black;
+// }
 .navbar-brand {
     color: white;
-    opacity:0.75;
+    // opacity:0.75;
     font-family: "Special Elite";
     font-style: bold;
     font-weight:1000;
+
+}
+.gold {
+      color: #E8D683;
 }
 
 //Background gradient
-
-.navbar, .home-callout{
+.navbar, .home-callout, body{
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#729aea+0,5d88df+44,4373d3+100 */
 background: rgb(114,154,234); /* Old browsers */
 background: -moz-linear-gradient(-45deg,  rgba(114,154,234,1) 0%, rgba(93,136,223,1) 44%, rgba(67,115,211,1) 100%); /* FF3.6-15 */
