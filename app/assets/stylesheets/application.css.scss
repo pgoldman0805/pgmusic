@@ -37,7 +37,7 @@ h1, h2, h3 {
 .navbar-default .navbar-toggle{
   border:2px solid white;
   &:hover, &:focus{
-    background-color:MidnightBlue;
+    background-color:rgba(122,188,255,1);
   }
 }
 
@@ -47,10 +47,11 @@ h1, h2, h3 {
 .navbar-default .navbar-nav li a  {
   color:#FDFFED;
   &:hover {
-    background-color: rgba(255,255,230,0.2);
-    // box-shadow: 1px 1px 1px black;
+    // background-color: rgba(255,255,230,0.2);
+    color:#FDFFED;
+    box-shadow: 1px 1px 10px black;
     // color:#FFE9A5;
-    text-shadow: 1px 1px 5px white;
+    // text-shadow: 1px 1px 5px white;
     // opacity:0.90;
   }
 }

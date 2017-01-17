@@ -12,7 +12,7 @@
 
   <body>
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
-      <div class='container'>
+      <div class='container-fluid'>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -34,7 +34,13 @@
             <li><%= link_to "Booking", booking_path %></li>
             <li><%= link_to "Song List", '#' %></li>
             <li><%= link_to "Lessons", '#' %></li>
-            <li><%= link_to "Media", '#' %></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Audio</a></li>
+                <li><a href="#">Video</a></li>
+              </ul>
+            </li>
             <li><%= link_to "Testimonials", '#' %></li>
             <li><%= link_to "Contact", new_contact_path %></li>
           </ul>
