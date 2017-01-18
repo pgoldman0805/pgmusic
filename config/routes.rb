@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   resources :contacts, only: :create
   get 'contact-paul', to:'contacts#new', as:'new-contact'
   get 'booking', to:'pages#booking'
+  get 'songlist', to: 'pages#songlist'
+  get 'audio', to: 'pages#audio'
+  get 'video', to: 'pages#video'
+  get 'lessons',to: 'pages#lessons'
 end

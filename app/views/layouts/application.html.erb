@@ -25,20 +25,20 @@
             Paul<span class="gold">Goldman</span>Music
           <% end %>
         </div>
-        <div class="collapse navbar-collapse" id="main-nav-collapse">
+        <div class="navbar-collapse collapse" id="main-nav-collapse">
           
           <ul class="nav navbar-nav navbar-right">
 
             <li><%= link_to "About Paul", about_path %></li>
             <li><%= link_to "Calendar", calendar_path %></li>
             <li><%= link_to "Booking", booking_path %></li>
-            <li><%= link_to "Song List", '#' %></li>
-            <li><%= link_to "Lessons", '#' %></li>
+            <li><%= link_to "Song List", songlist_path %></li>
+            <li><%= link_to "Lessons", lessons_path %></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Audio</a></li>
-                <li><a href="#">Video</a></li>
+              <ul class="dropdown-menu navbar-default" id="media-dropdown">
+                <li><%= link_to "Audio", audio_path %></li>
+                <li><%= link_to "Video", video_path %></li>
               </ul>
             </li>
             <li><%= link_to "Testimonials", '#' %></li>

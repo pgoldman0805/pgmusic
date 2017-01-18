@@ -14,4 +14,13 @@ class PagesController < ApplicationController
     
     def songlist
     end
+    
+    def audio
+    end
+    
+    def video
+    end
+    
+    def lessons
+    end
 end
