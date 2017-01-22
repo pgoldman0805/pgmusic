@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'contact-paul', to:'contacts#new', as:'new-contact'
   get 'booking', to:'pages#booking'
   get 'songlist', to: 'pages#songlist'
-  get 'audio', to: 'pages#audio'
+  get 'photos', to: 'pages#photos'
   get 'video', to: 'pages#video'
   get 'lessons',to: 'pages#lessons'
 end

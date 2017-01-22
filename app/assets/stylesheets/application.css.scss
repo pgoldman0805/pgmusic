@@ -26,13 +26,13 @@ h1, h2, h3 {
 }
 
 // Nav Styles
-.navbar {
-  width: 100%;
-  // margin-top:6px;
-  border-bottom: 1px solid black;
-  position:absolute;
-  display: inline-block;
-}
+// .navbar {
+//   width: 100%;
+//   // margin-top:6px;
+//   border-bottom: 1px solid black;
+//   position:absolute;
+//   display: inline-block;
+// }
 
 .navbar-default .navbar-toggle .icon-bar{
   background-color:white;
@@ -42,6 +42,7 @@ h1, h2, h3 {
   border:2px solid white;
   &:hover, &:focus{
     background-color:rgba(122,188,255,1);
+    // color:#FDFFED;
   }
 }
 
@@ -49,19 +50,20 @@ h1, h2, h3 {
 // Nav text styles + hover
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav li a  {
+  font-family: "Exo 2", sans-serif;
   color:#FDFFED;
   &:hover,  {
     background-color: #556677;
     transition: background-color 0.3s ease;
-    // color:#FDFFED;
+    color:#FDFFED;
     // box-shadow: 0 0 1px 1px black;
-    color:#FFE9A5;
+    // color:#FFE9A5;
     // text-shadow: 1px 1px 5px white;
     // opacity:0.90;
   }
 }
 
-.navbar .dropdown-menu {
+.navbar-default .dropdown-menu {
   background-color:none;
   color:#FDFFED;
   &:hover, &:focus, &:active {
@@ -75,23 +77,35 @@ h1, h2, h3 {
     background-color: rgba(255,255,230,0.1);
 }
 
-.navbar-brand {
-    color: #FDFFED;
-    // opacity:0.75;
-    font-family: "Special Elite";
-    font-style: bold;
-    font-weight:1000;
+.navbar-brand{
+    font-family: "Exo 2", sans-serif;
+    padding-top: 14px ;
+    position: relative;
+    
+    // height: 60px;
 }
 
-//Background gradient
-.navbar, .navbar, .home-callout, body{
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
-background: rgb(122,188,255); /* Old browsers */
-background: -moz-linear-gradient(-45deg,  rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg,  rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.navbar-static-top {
+    margin-top: 0px;
+    padding-top: 20px;
+    height: 40px;
+    // padding: 10px;
+}
 
+html, body {
+  height: 100%;
+}
+//Background gradient
+.navbar, .home-callout, body{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0386c7+0,002e44+100 */
+background: rgb(3,134,199); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(3,134,199,1) 0%, rgba(0,46,68,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(3,134,199,1) 0%,rgba(0,46,68,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(3,134,199,1) 0%,rgba(0,46,68,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0386c7', endColorstr='#002e44',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+background-size: cover;
+// background-repeat: no-repeat;
 }
 
 .home-callout {
@@ -107,7 +121,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', end
   padding-top:70px;
 }
 
-p {
-  font-family:'Exo 2',sans-serif;
-  font-size: 20px;
-}
+// p {
+//   font-family:'Exo 2',sans-serif;
+//   font-size: 20px;
+// }

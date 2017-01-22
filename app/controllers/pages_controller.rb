@@ -15,7 +15,7 @@ class PagesController < ApplicationController
     def songlist
     end
     
-    def audio
+    def photos
     end
     
     def video
