@@ -1,5 +1,20 @@
 <div class="container text-center">
-  <div class="row">
+  <div class="row-fluid">
     <h1>Photos</h1>
+      <div class="responsive">
+        <div class="img">
+         <%= image_tag(image_path("photos/PaulBlue1.jpg"), :alt => "Paul bathed in blue light")%>
+         <div class="desc">Add a description of the image here</div>
+        </div>
+        <div class="img">
+         <%= image_tag(image_path("photos/paulAtHugos1.jpg"), :alt => "Paul bathed in blue light")%>
+        </div>
+        <div class="img">
+          <%= image_tag(image_path("photos/PaulAtHugos2.jpg"), :alt => "Paul bathed in blue light")%>
+        </div>
+        <div class="img">
+         <%= image_tag(image_path("photos/PaulBlue1.jpg"), :alt => "Paul bathed in blue light")%>
+        </div>
+      </div>
   </div>
 </div>

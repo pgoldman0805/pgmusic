@@ -99,9 +99,9 @@ html, body {
 .navbar, .home-callout, body{
 /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0386c7+0,002e44+100 */
 background: rgb(3,134,199); /* Old browsers */
-background: -moz-linear-gradient(-45deg,  rgba(3,134,199,1) 0%, rgba(0,46,68,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg,  rgba(3,134,199,1) 0%,rgba(0,46,68,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg,  rgba(3,134,199,1) 0%,rgba(0,46,68,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: -moz-linear-gradient(90deg,  rgba(3,134,199,1) 0%, rgba(0,46,68,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(90deg,  rgba(3,134,199,1) 0%,rgba(0,46,68,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(90deg,  rgba(3,134,199,1) 0%,rgba(0,46,68,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0386c7', endColorstr='#002e44',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 background-size: cover;
@@ -121,7 +121,55 @@ background-size: cover;
   padding-top:70px;
 }
 
-// p {
-//   font-family:'Exo 2',sans-serif;
-//   font-size: 20px;
-// }
+
+
+// RESPONSIVE STYLES
+///
+///
+
+div.img {
+    border: 1px solid #ccc;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
