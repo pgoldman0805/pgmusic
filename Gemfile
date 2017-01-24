@@ -47,6 +47,9 @@ gem 'hirb', '0.7.3'
 #use Devise for user authentication
 gem 'devise', '4.2.0'
 
+# Use cloudinary as image/video CDN
+gem 'cloudinary'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

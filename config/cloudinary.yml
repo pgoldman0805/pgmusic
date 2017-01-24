@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dl4upkour
+  api_key: '857657234312331'
+  api_secret: GoGPc0Wzb28HloqnH9b6CtvsxM8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dl4upkour
+  api_key: '857657234312331'
+  api_secret: GoGPc0Wzb28HloqnH9b6CtvsxM8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dl4upkour
+  api_key: '857657234312331'
+  api_secret: GoGPc0Wzb28HloqnH9b6CtvsxM8
+  enhance_image_tag: true
+  static_image_support: false
