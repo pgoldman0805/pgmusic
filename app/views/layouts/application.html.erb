@@ -4,6 +4,7 @@
     
     <title>PaulGoldmanMusic</title>
     <%= csrf_meta_tags %>
+    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
     <link rel="icon" href="Twitch_AVATAR.ico">
     <link href="https://fonts.googleapis.com/css?family=Exo+2|Kanit|Signika+Negative|Special+Elite" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -21,7 +22,7 @@
             <span class="icon-bar"></span>
           </button>
           <%= link_to root_path, class: "navbar-brand" do %>
-            PaulGoldmanMusic
+            PaulGoldmanMusic | Home
             <!--<%= image_tag(image_path("Twitch_BANNER.png"), :alt => "PaulGoldmanMusic", :style => "height: 100%; width:100%; float:left;position:absolute;") %>-->
           <% end %>
         </div>
@@ -38,7 +39,7 @@
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media<span class="caret"></span></a>
               <ul class="dropdown-menu navbar-default" id="media-dropdown">
                 <li><%= link_to "Photos", photos_path %></li>
-                <li><%= link_to "Video", video_path %></li>
+                <li><%= link_to "Videos", video_path %></li>
               </ul>
             </li>
             <li><%= link_to "Testimonials", '#' %></li>

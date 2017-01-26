@@ -20,7 +20,7 @@
 @import 'font-awesome';
 
 // Typography styles
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Exo 2', sans-serif;
   color: white;
 }
@@ -77,6 +77,10 @@ h1, h2, h3 {
     background-color: rgba(255,255,230,0.1);
 }
 
+#media-dropdown li {
+  color: #FDFFED;
+}
+
 .navbar-brand{
     font-family: "Exo 2", sans-serif;
     padding-top: 14px ;
@@ -118,58 +122,50 @@ background-size: cover;
 }
 
 .container {
-  padding-top:70px;
+  padding-top:50px;
 }
 
-
-
-// RESPONSIVE STYLES
-///
-///
-
-div.img {
-    border: 1px solid #ccc;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-div.img:hover {
-    border: 1px solid #777;
+.gallery .photo{
+  margin: 8px;
 }
 
-div.img img {
-    width: 100%;
-    height: auto;
+.jumbotron{
+  display: flex;
+  align-items: center;
+  background-color: black;
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 
-div.desc {
-    padding: 15px;
-    text-align: center;
+/* VIDEO STYLES */
+
+#playlist {
+    display:table;
+    text-align: justify;
+}
+#playlist li{
+    cursor: pointer;
+    padding: 8px;
+    color: white;
+    font-size: 16px;
+    list-style: none;
 }
 
-* {
-    box-sizing: border-box;
+#playlist li:hover{
+    color: DeepSkyBlue;                        
 }
-
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px){
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px){
-    .responsive {
-        width: 100%;
-    }
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+#videoarea {
+    float: right;
+    width:640px;
+    // height:480px;
+    margin:10px;    
+    // border:1px solid silver;
 }
