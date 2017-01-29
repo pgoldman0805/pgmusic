@@ -4,9 +4,10 @@
     
     <title>PaulGoldmanMusic</title>
     <%= csrf_meta_tags %>
-    <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+    <!--<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">-->
+    <meta name="viewport" content="width=device-width">
     <link rel="icon" href="Twitch_AVATAR.ico">
-    <link href="https://fonts.googleapis.com/css?family=Exo+2|Kanit|Signika+Negative|Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Kanit|PT+Serif|Signika+Negative|Special+Elite" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -22,8 +23,8 @@
             <span class="icon-bar"></span>
           </button>
           <%= link_to root_path, class: "navbar-brand" do %>
-            PaulGoldmanMusic | Home
-            <!--<%= image_tag(image_path("Twitch_BANNER.png"), :alt => "PaulGoldmanMusic", :style => "height: 100%; width:100%; float:left;position:absolute;") %>-->
+            Home
+            <!--<%= cl_image_tag("Twitch_BANNER.png", :height=>200, :float=>"left", :crop=>"scale") %>-->
           <% end %>
         </div>
         <div class="navbar-collapse collapse" id="main-nav-collapse">
@@ -59,8 +60,27 @@
     
     <%= yield %>
     
-    <footer class="text-center">
-      &#169; 2017 Paul Goldman
+    <footer class="footer text-center">
+      <div class="well well-sm">
+        <div id="footer-social">
+          <a href="https://www.facebook.com/paulgoldmanmusic">
+            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="https://twitter.com/goldman_paul">
+            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="https://youtube.com/paulgoldmanmusic">
+            <i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="https://twitch.tv/paulgoldmanmusic">
+            <i class="fa fa-twitch fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/paulgoldmanmusic">
+            <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <p id="copyright-text">&#169; 2017 Paul Goldman</p>
     </footer>
     
   </body>

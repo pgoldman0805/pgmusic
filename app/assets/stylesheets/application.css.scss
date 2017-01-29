@@ -25,6 +25,11 @@ h1, h2, h3, h4 {
   color: white;
 }
 
+p {
+  font-family: 'PT Serif', serif;
+  font-size: 20px;
+  line-height: 150%;
+}
 // Nav Styles
 // .navbar {
 //   width: 100%;
@@ -53,8 +58,8 @@ h1, h2, h3, h4 {
   font-family: "Exo 2", sans-serif;
   color:#FDFFED;
   &:hover,  {
-    background-color: #556677;
-    transition: background-color 0.3s ease;
+    background-color: RGBA(255,255,255,0.2);
+    transition: background-color 0.2s ease;
     color:#FDFFED;
     // box-shadow: 0 0 1px 1px black;
     // color:#FFE9A5;
@@ -101,15 +106,16 @@ html, body {
 }
 //Background gradient
 .navbar, .home-callout, body{
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0386c7+0,002e44+100 */
-background: rgb(3,134,199); /* Old browsers */
-background: -moz-linear-gradient(90deg,  rgba(3,134,199,1) 0%, rgba(0,46,68,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(90deg,  rgba(3,134,199,1) 0%,rgba(0,46,68,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(90deg,  rgba(3,134,199,1) 0%,rgba(0,46,68,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0386c7', endColorstr='#002e44',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e78+0,134657+40,122e46+59 */
+background: rgb(0,110,120); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(0,110,120,1) 0%, rgba(19,70,87,1) 40%, rgba(18,46,70,1) 59%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(0,110,120,1) 0%,rgba(19,70,87,1) 40%,rgba(18,46,70,1) 59%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(0,110,120,1) 0%,rgba(19,70,87,1) 40%,rgba(18,46,70,1) 59%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e78', endColorstr='#122e46',GradientType=1 ); /* IE6-9 */
 
 background-size: cover;
 // background-repeat: no-repeat;
+
 }
 
 .home-callout {
@@ -119,6 +125,10 @@ background-size: cover;
   padding-bottom: 100px;
   // border-bottom: 7px dashed white;
   
+}
+// ABOUT Page list style
+.about-artist-list{
+  list-style: none;
 }
 
 .container {
@@ -138,10 +148,10 @@ background-size: cover;
 .jumbotron{
   display: flex;
   align-items: center;
-  background-color: black;
+  // background-color: black;
   background-size: cover;
   color: #ffffff;
-  height: 500px;
+  // height: 500px;
   text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 
@@ -168,4 +178,16 @@ background-size: cover;
     // height:480px;
     margin:10px;    
     // border:1px solid silver;
+}
+
+// FOOTER STYLES
+#footer-social {
+  color:white;
+  display:inline;
+  margin: 200px;
+  padding: 145px;
+}
+
+#copyright-text {
+  color:#FDFFED;
 }
