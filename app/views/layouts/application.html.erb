@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
     
     <title>PaulGoldmanMusic</title>
-    <%= csrf_meta_tags %>
-    <!--<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">-->
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="Twitch_AVATAR.ico">
-    <link href="https://fonts.googleapis.com/css?family=Exo+2|Kanit|PT+Serif|Signika+Negative|Special+Elite" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Kanit|Bowlby+One+SC|PT+Serif|Fredericka+the+Great|Signika+Negative|Special+Elite" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class='container-fluid'>
+      <div class='container'>
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+          <%= link_to root_path, class: "navbar-brand" do %>
+            Home
+            <!--<img src="https://res.cloudinary.com/dl4upkour/image/upload/v1485445956/Twitch_BANNER.png" alt="banner">-->
+          <% end %>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to root_path, class: "navbar-brand" do %>
-            Home
-            <!--<%= cl_image_tag("Twitch_BANNER.png", :height=>200, :float=>"left", :crop=>"scale") %>-->
-          <% end %>
         </div>
-        <div class="navbar-collapse collapse" id="main-nav-collapse">
+        <!-- Collect the nav links, forms, and other content for toggling -->  
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
           
           <ul class="nav navbar-nav navbar-right">
 
@@ -35,19 +37,15 @@
             <li><%= link_to "Calendar", calendar_path %></li>
             <li><%= link_to "Booking", booking_path %></li>
             <li><%= link_to "Song List", songlist_path %></li>
-            <li><%= link_to "Lessons", lessons_path %></li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media<span class="caret"></span></a>
-              <ul class="dropdown-menu navbar-default" id="media-dropdown">
-                <li><%= link_to "Photos", photos_path %></li>
-                <li><%= link_to "Videos", video_path %></li>
-              </ul>
-            </li>
-            <li><%= link_to "Testimonials", '#' %></li>
+            <!--<li class="dropdown">-->
+            <!--  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Media<span class="caret"></span></a>-->
+            <!--  <ul class="dropdown-menu navbar-default" id="media-dropdown">-->
+                <!--<li><%= link_to "Photos", photos_path %></li>-->
+            <li><%= link_to "Videos", video_path %></li>
+              <!--</ul>-->
+            <!--</li>-->
             <li><%= link_to "Contact", new_contact_path %></li>
           </ul>
-
-
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
@@ -60,27 +58,40 @@
     
     <%= yield %>
     
-    <footer class="footer text-center">
-      <div class="well well-sm">
-        <div id="footer-social">
-          <a href="https://www.facebook.com/paulgoldmanmusic">
-            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
-          </a>
-          <a href="https://twitter.com/goldman_paul">
-            <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
-          </a>
-          <a href="https://youtube.com/paulgoldmanmusic">
-            <i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i>
-          </a>
-          <a href="https://twitch.tv/paulgoldmanmusic">
-            <i class="fa fa-twitch fa-2x" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/paulgoldmanmusic">
-            <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-          </a>
+    <footer>
+      <div class="container">
+        <div class="row text-center">
+          <!--<div id="footer-logo" class="vertical-center">-->
+          <!--  <img src="https://res.cloudinary.com/dl4upkour/image/upload/v1485445956/Twitch_AVATAR.png" alt="Logo"/>-->
+          <!--</div>-->
+          <div id="footer-social">
+            <a href="https://www.facebook.com/paulgoldmanmusic" target="blank" alt="Facebook" title="Facebook">
+              <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/goldman_paul" target="blank" alt="Twitter" title="Twitter">
+              <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com/paulgoldmanmusic" target="blank" alt="Youtube" title="Youtube">
+              <i class="fa fa-youtube-square fa-3x" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitch.tv/paulgoldmanmusic" target="blank" alt="Twitch.tv" title="Twitch.tv">
+              <i class="fa fa-twitch fa-3x" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/paulgoldmanmusic" target="blank" alt="LinkedIn" title="LinkedIn">
+              <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+            </a>
+            
+          </div>
+          <div id="copyright-text">
+            <p class="gold">
+              <a href="mailto:paul@paulgoldmanmusic.com">
+                <span class="glyphicon glyphicon-envelope"></span> paul@paulgoldmanmusic.com</a>
+                <br> &#169; 2017 Paul Goldman
+            </p>
+          </div>
         </div>
       </div>
-      <p id="copyright-text">&#169; 2017 Paul Goldman</p>
+      
     </footer>
     
   </body>

@@ -1,6 +1,7 @@
 class ContactsController < ApplicationController
    def new
        @contacts = Contact.new
+      # render "layouts/application"
    end
    # POST request to /contacts
   def create

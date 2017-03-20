@@ -19,141 +19,136 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+
+html {
+  // min-height: 100%;
+  // position: relative;
+}
 // Typography styles
 h1, h2, h3, h4 {
-  font-family: 'Exo 2', sans-serif;
-  color: white;
+  font-family: 'Bowlby One SC', sans-serif;
+  color: #222222;
+  // margin-top: 50px;
+  margin-bottom: 44px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid gray;
 }
 
 p {
-  font-family: 'PT Serif', serif;
-  font-size: 20px;
+  font-family: 'Garamond', serif;
+  font-size: 18px;
   line-height: 150%;
+  margin-bottom: 20px;
+  color: #333;
 }
-// Nav Styles
-// .navbar {
-//   width: 100%;
-//   // margin-top:6px;
-//   border-bottom: 1px solid black;
-//   position:absolute;
-//   display: inline-block;
-// }
+
+p a:hover{
+  text-decoration: none;
+}
+
+.gold {
+  color: rgb(177,128,42);
+}
+ /*
+ / NAV STYLES
+*/
+.navbar-fixed-top{
+  // width: 100%;
+  // position: absolute;
+  background: rgba(0,0,0,0.8);
+  // opacity: 0.85;
+  position: fixed;
+}
+
+.navbar-header {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 
 .navbar-default .navbar-toggle .icon-bar{
   background-color:white;
 }
 
 .navbar-default .navbar-toggle{
+  // float: right;
   border:2px solid white;
   &:hover, &:focus{
-    background-color:rgba(122,188,255,1);
-    // color:#FDFFED;
+    background-color: #333;
+    // cursor: pointer;
   }
 }
-
+.navbar-brand {
+  margin-left: auto;
+  img{
+  float: left;
+  width: 100%;
+  height: auto;
+  }
+}
 
 // Nav text styles + hover
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav li a  {
   font-family: "Exo 2", sans-serif;
-  color:#FDFFED;
+  font-size: 1.3em;
+  color: rgba(255,220,113, 0.7);
   &:hover,  {
-    background-color: RGBA(255,255,255,0.2);
-    transition: background-color 0.2s ease;
-    color:#FDFFED;
-    // box-shadow: 0 0 1px 1px black;
-    // color:#FFE9A5;
-    // text-shadow: 1px 1px 5px white;
-    // opacity:0.90;
+    // background-color: RGBA(255,255,255,0.5);
+    transition: color 0.3s ease;
+    color: rgba(255,220,113,1);
   }
 }
 
 .navbar-default .dropdown-menu {
-  background-color:none;
-  color:#FDFFED;
+  background-color:RGBA(0,0,0,0.8);
   &:hover, &:focus, &:active {
-    background-color: rgba(255,255,230,0.1);
-    color:#FFE9A5;
-    
+    background-color: rgba(0,0,0,0.8);
   }
 }
 
 #media-dropdown {
-    background-color: rgba(255,255,230,0.1);
+    background-color: rgba(0,0,0,1.0);
 }
 
-#media-dropdown li {
-  color: #FDFFED;
+#media-dropdown li a {
+  // color: #FDFFED;
+  background-color: rgba(0,0,0,1.0);
+  :hover{
+    background-color: rgba(0,0,0,1.0);
+  }
 }
 
-.navbar-brand{
-    font-family: "Exo 2", sans-serif;
-    padding-top: 14px ;
-    position: relative;
-    
-    // height: 60px;
+body {
+  // height: 100%;
+  // overflow-x: hidden;
+  margin-top: 28px;
+  margin-bottom: 50px;
+  padding-top: 1.5%;
+  background-color: #eee;
 }
 
-.navbar-static-top {
-    margin-top: 0px;
-    padding-top: 20px;
-    height: 40px;
-    // padding: 10px;
+#about-img {
+  float: right;
+  width: 20%;
+  height: auto;
+  margin-left: 20px;
+  margin-bottom: 12px;
 }
 
-html, body {
+#songlist {
   height: 100%;
+  max-height: 600px;
+  position: relative;
 }
-//Background gradient
-.navbar, .home-callout, body{
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e78+0,134657+40,122e46+59 */
-background: rgb(0,110,120); /* Old browsers */
-background: -moz-linear-gradient(left,  rgba(0,110,120,1) 0%, rgba(19,70,87,1) 40%, rgba(18,46,70,1) 59%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(0,110,120,1) 0%,rgba(19,70,87,1) 40%,rgba(18,46,70,1) 59%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(0,110,120,1) 0%,rgba(19,70,87,1) 40%,rgba(18,46,70,1) 59%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e78', endColorstr='#122e46',GradientType=1 ); /* IE6-9 */
+// .gallery {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+// }
 
-background-size: cover;
-// background-repeat: no-repeat;
-
-}
-
-.home-callout {
-  color: white;
-  // margin-top: -20px;
-  padding-top: 75px;
-  padding-bottom: 100px;
-  // border-bottom: 7px dashed white;
-  
-}
-// ABOUT Page list style
-.about-artist-list{
-  list-style: none;
-}
-
-.container {
-  padding-top:50px;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.gallery .photo{
-  margin: 8px;
-}
-
-.jumbotron{
-  display: flex;
-  align-items: center;
-  // background-color: black;
-  background-size: cover;
-  color: #ffffff;
-  // height: 500px;
-  text-shadow: 0.25px 0.25px 0.25px #000000;
-}
+// .gallery .photo{
+//   margin: 8px;
+// }
 
 /* VIDEO STYLES */
 
@@ -162,32 +157,143 @@ background-size: cover;
     text-align: justify;
 }
 #playlist li{
+    font-family: 'Garamond', sans-serif;
     cursor: pointer;
     padding: 8px;
-    color: white;
+    color: black;
     font-size: 16px;
     list-style: none;
 }
 
 #playlist li:hover{
-    color: DeepSkyBlue;                        
+    // color: DeepSkyBlue;    
+    text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 #videoarea {
     float: right;
-    width:640px;
-    // height:480px;
-    margin:10px;    
+    width: 50%;
+    max-height: 500px;
+    margin-left: 15px;    
+    // text-align: center;
     // border:1px solid silver;
 }
 
 // FOOTER STYLES
-#footer-social {
-  color:white;
-  display:inline;
-  margin: 200px;
-  padding: 145px;
+footer {
+  background-color: RGBA(0,0,0,1);
+  width: 100%;
+  position: absolute;
+  // text-align: center;
+  // background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/v1485445956/Twitch_AVATAR.png");
+  // background-repeat: no-repeat;
+  // background-origin: content-box;
+  // background-size: 15%;
+  // margin-top: -24px;
 }
 
-#copyright-text {
-  color:#FDFFED;
+#footer-logo {
+  float: left;
+  width: 20%;
+  text-align: center;
+  // margin-left: auto;
+  align-items: center;
+  img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    // position: fixed;
+    
+  }
+}
+#footer-social {
+  // float: right;
+  width: 100%;
+  color:rgb(177,128,42);
+  display: inline-block;
+  margin: 0 auto;
+  padding: 25px;
+  // position: fixed;
+  // background-image: url("http://res.cloudinary.com/dl4upkour/image/upload/v1485445956/Twitch_BANNER.png")
+}
+
+/* FONT-AWESOME RESIZING
+*
+*/
+
+.fa {
+  // font-size: 20px;
+  // font-size: 6vw;
+}
+
+#footer-social a {
+  margin: auto 14px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#copyright-text{
+  margin: auto 20px;
+  clear: both;
+  font-size: 0.75em;
+  // padding-right: 45px;
+  letter-spacing: 0.05em;
+  a {
+    color: #eee;
+  }
+  display: inline-block;
+  // border: 15px solid white;
+}
+
+img.home-image {
+  height: 100%;
+  width: 100%;
+}
+
+#home-minus-background {
+  background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/o_29/v1485288226/psalm4.png");
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  
+}
+
+#home-sub-title{
+  letter-spacing: 0.2em;
+  border: none;
+}
+#home-name {
+  font-size: 4.5em;
+  font-weight: bold;
+  border: none;
+  margin-top: 34px;
+}
+
+// * {
+//   border: 1px solid red;
+// }
+// @media screen and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
+//   * {
+//     border: 1px solid green;
+//   }
+// }
+// @media screen and (max-width: 480px) and (min-width: 10px) { 
+//   // .col-ts-12 { float: none; }
+//   border: 5px solid yellow;
+// }
+
+@media screen and (max-width: 400px) and (min-width: 300px){
+  .fa {
+    font-size: 30px;
+  }
+}
+.vertical-center {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
 }
