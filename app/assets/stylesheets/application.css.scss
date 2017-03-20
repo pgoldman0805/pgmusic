@@ -53,16 +53,20 @@ p a:hover{
  / NAV STYLES
 */
 .navbar-fixed-top{
-  // width: 100%;
-  // position: absolute;
-  background: rgba(0,0,0,0.8);
-  // opacity: 0.85;
   position: fixed;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+  background: #45484d; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #45484d 0%, #000000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 .navbar-header {
   margin-left: -15px;
   margin-right: -15px;
+  // background: rgba(0,0,0,0.8);
 }
 
 .navbar-default .navbar-toggle .icon-bar{
