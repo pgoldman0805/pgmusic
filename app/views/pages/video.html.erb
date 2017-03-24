@@ -1,23 +1,40 @@
 <script>
+  
   $(function() {
-    $("#playlist li").on("click", function() {
-        $("#videoarea").attr({
+    $('a').on('click', function() {
+      console.log("TEST");
+      // vid[0].pause();
+    })
+    
+    var vid = $("#videoarea");
+    var playlistLink = $("#playlist li");
+    
+    playlistLink.on("click", function() {
+       vid.attr({
             "src": $(this).attr("movieurl"),
             "poster": "",
-            "autoplay": "autoplay"
         })
+        vid[0].play();
     })
-    $("#videoarea").attr({
-        "src": $("#playlist li").eq(0).attr("movieurl"),
-        "poster": $("#playlist li").eq(0).attr("moviesposter")
+    vid.attr({
+        "src": playlistLink.eq(0).attr("movieurl"),
+        "poster": playlistLink.eq(0).attr("moviesposter"),
     })
-})
+    vid.on("click", function(){
+      if (vid[0].paused)
+        vid[0].play();
+      else 
+        vid[0].pause();
+    });
+    
+  });
+  
 </script>
 
 <div class="container text-center">
   <div class="row">
     <h1>Videos</h1>
-    <video id="videoarea" controls="controls" poster="" src=""></video>
+    <video id="videoarea" controls="controls" poster="" src="" >Video Not Supported</video>
       
     <!--<ul id="playlist"> <h3> - Twitch.TV Highlights </h3>-->
     <!--  <li movieurl="https://youtu.be/NlhpGu71h0k">Keep Your Hands Off My Baby</li>-->
