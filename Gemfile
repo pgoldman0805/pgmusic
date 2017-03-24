@@ -49,6 +49,8 @@ gem 'devise', '4.2.0'
 # Use cloudinary as image/video CDN
 gem 'cloudinary'
 
+# Google Calendar API
+gem 'google-api-client'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

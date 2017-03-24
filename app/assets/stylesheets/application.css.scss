@@ -20,10 +20,75 @@
 @import 'font-awesome';
 
 
-html {
-  // min-height: 100%;
-  // position: relative;
+/*
+/  HOME PAGE STYLES
+*/
+
+#home-image {
+  
+  // margin-bottom: 20%;
+  height: 100%;
+  
+  background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/c_scale,w_1507/v1485288229/PaulGoldmanMainCROPPED.jpg");
+  background-size: 100% 100%;
+  background-repeat: none;
+  // background-position: left top;
+  background-attachment: fixed;
+
+  
 }
+
+.jumbotron {
+    
+    /* ORIGINAL IMAGE */
+    // background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/o_29/v1485288226/psalm4.png");
+    background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/o_31/v1485288220/recital_hands_azqtcm.png");
+    background-attachment: fixed;
+    background-repeat: none;
+    background-size: 100% 100%;
+
+    height: 20%;
+    max-height: 300px;
+    // width: 80%;
+    opacity: 0.80;
+    // position: fixed;
+    // border: 3px solid green;
+    margin-top: 50%;
+    margin-bottom: 35%;
+    padding: 30px;
+    box-shadow: 1px 1px 5px rgb(177,128,42);
+}
+
+#home-name {
+  // float: left;
+  color: #333;
+  font-size: 4.1em;
+  font-weight: bold;
+  text-shadow: 2px 3px rgb(177,128,42);
+  border: none;
+  margin-top: 0;
+  // margin-bottom: 0;
+  // background: #eee;
+  vertical-align: center;
+}
+
+#home-sub-title{
+  // display: inline-block;
+  // float: left;
+  // clear: both;
+  color: #444;
+  text-shadow: 2px 3px #888888;
+  letter-spacing: 0.2em;
+  // line-height: 200%;
+  border: none;
+  // padding-bottom: -24px;
+  // margin-left: 44px;
+  // margin-bottom: 50%
+  margin-top: -48px;
+  margin-bottom: -24px;
+  // background: #eee;
+}
+
 // Typography styles
 h1, h2, h3, h4 {
   font-family: 'Bowlby One SC', sans-serif;
@@ -32,6 +97,7 @@ h1, h2, h3, h4 {
   margin-bottom: 44px;
   padding-bottom: 14px;
   border-bottom: 1px solid gray;
+  text-shadow: 2px 3px #888888;
 }
 
 p {
@@ -50,34 +116,30 @@ p a:hover{
   color: rgb(177,128,42);
 }
 
-// .jumbotron {
-//   background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/v1485288229/PaulGoldmanMainCROPPED.jpg");
-//   // background-attachment: fixed;
-//   // background-size: 100% 100%;
-//   // height: 80%;
-// }
+.white {
+  color: #eee;
+}
 
  /*
  / NAV STYLES
 */
 .navbar-fixed-top{
   position: fixed;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
-  background: #45484d; /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  #45484d 0%, #000000 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg,  #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg,  #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  border: none;
-  // opacity: 0.85;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+background: rgb(69,72,77); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  border-bottom: 1px solid #eee;
   width: 100%;
-
+  margin-bottom: 14px;
+  
 }
 
 .navbar-header {
   margin-left: -15px;
   margin-right: -15px;
-  // background: rgba(0,0,0,0.8);
 }
 
 .navbar-default .navbar-toggle .icon-bar{
@@ -85,11 +147,9 @@ p a:hover{
 }
 
 .navbar-default .navbar-toggle{
-  // float: right;
   border:2px solid white;
   &:hover, &:focus{
     background-color: #333;
-    // cursor: pointer;
   }
 }
 .navbar-brand {
@@ -106,36 +166,14 @@ p a:hover{
 .navbar-default .navbar-nav li a  {
   font-family: "Exo 2", sans-serif;
   font-size: 1.3em;
-  color: rgba(255,220,113, 0.7);
+  color: rgba(255,220,113, 1);
   &:hover,  {
-    // background-color: RGBA(255,255,255,0.5);
-    transition: color 0.3s ease;
-    color: rgba(255,220,113,1);
-  }
-}
-
-.navbar-default .dropdown-menu {
-  background-color:RGBA(0,0,0,0.8);
-  &:hover, &:focus, &:active {
-    background-color: rgba(0,0,0,0.8);
-  }
-}
-
-#media-dropdown {
-    background-color: rgba(0,0,0,1.0);
-}
-
-#media-dropdown li a {
-  // color: #FDFFED;
-  background-color: rgba(0,0,0,1.0);
-  :hover{
-    background-color: rgba(0,0,0,1.0);
+    transition: color 0.4s ease;
+    color: rgba(255,220,113,0.5);
   }
 }
 
 body {
-  // height: 100%;
-  // overflow-x: hidden;
   margin-top: 28px;
   margin-bottom: 50px;
   padding-top: 1.5%;
@@ -151,27 +189,31 @@ body {
   margin-bottom: 12px;
 }
 
+.about-artist-list {
+  list-style-type: square;
+}
+
 #songlist {
   height: 100%;
   max-height: 600px;
   position: relative;
 }
-// .gallery {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: center;
-// }
-
-// .gallery .photo{
-//   margin: 8px;
-// }
 
 /* VIDEO STYLES */
 
 #playlist {
     display:table;
     text-align: justify;
+    
+    h3 {
+      border: none;
+      color: #333;
+      margin-bottom: 0;
+      
+    }
 }
+
+
 #playlist li{
     font-family: 'Garamond', sans-serif;
     cursor: pointer;
@@ -182,63 +224,33 @@ body {
 }
 
 #playlist li:hover{
-    // color: DeepSkyBlue;    
     text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 #videoarea {
     float: right;
-    width: 50%;
+    width: 100%;
     max-height: 500px;
     margin-left: 15px;    
-    // text-align: center;
-    // border:1px solid silver;
 }
 
 // FOOTER STYLES
 footer {
+  // float: right;
   background-color: RGBA(0,0,0,1);
   width: 100%;
   position: absolute;
-  // text-align: center;
-  // background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/v1485445956/Twitch_AVATAR.png");
-  // background-repeat: no-repeat;
-  // background-origin: content-box;
-  // background-size: 15%;
-  // margin-top: -24px;
+  border-top: 1px solid #eee;
 }
 
-#footer-logo {
-  float: left;
-  width: 20%;
-  text-align: center;
-  // margin-left: auto;
-  align-items: center;
-  img {
-    margin: auto;
-    height: 100%;
-    width: 100%;
-    // position: fixed;
-    
-  }
-}
 #footer-social {
-  // float: right;
+  // border: 3px solid blue;
+  float: right;
   width: 100%;
   color:rgb(177,128,42);
   display: inline-block;
   margin: 0 auto;
+  margin-top: 5%;
   padding: 25px;
-  // position: fixed;
-  // background-image: url("http://res.cloudinary.com/dl4upkour/image/upload/v1485445956/Twitch_BANNER.png")
-}
-
-/* FONT-AWESOME RESIZING
-*
-*/
-
-.fa {
-  // font-size: 20px;
-  // font-size: 6vw;
 }
 
 #footer-social a {
@@ -252,56 +264,63 @@ footer {
   margin: auto 20px;
   clear: both;
   font-size: 0.75em;
-  // padding-right: 45px;
   letter-spacing: 0.05em;
   a {
     color: #eee;
   }
   display: inline-block;
-  // border: 15px solid white;
 }
 
-img.home-image {
-  height: 100%;
-  width: 100%;
+
+#booking {
+  // color: red;
+  border: 1px dotted gray;
+  box-shadow: 10px 10px 5px #888888;
 }
 
-#home-minus-background {
-  background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/o_29/v1485288226/psalm4.png");
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  
-}
-
-#home-sub-title{
-  letter-spacing: 0.2em;
-  border: none;
-}
-#home-name {
-  font-size: 4.5em;
-  font-weight: bold;
-  border: none;
-  margin-top: 34px;
-}
-
-// * {
-//   border: 1px solid red;
-// }
-// @media screen and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
-//   * {
-//     border: 1px solid green;
-//   }
-// }
-// @media screen and (max-width: 480px) and (min-width: 10px) { 
-//   // .col-ts-12 { float: none; }
-//   border: 5px solid yellow;
-// }
-
-@media screen and (max-width: 400px) and (min-width: 300px){
+@media screen and (max-width: 414px) and (min-width: 200px){
   .fa {
     font-size: 30px;
   }
+  #footer {
+    // margin-top: -48px;
+    margin: 0 auto;
+    height: 48px;
+  }
+  #footer-social {
+    padding: 15px;
+  }
+  .jumbotron {
+    // max-height: 200px;
+    margin-top: 100%;
+    // margin-bottom: 30%;
+  }
+  h1{
+    font-size: 20px;
+    margin-top: 10%;
+    // color: yellow;
+  }
+  
+  h3{
+    font-size: 12px;
+    // color: green;
+  }
+  #home-name {
+    font-size: 36px;
+  }
+  
+  #home-image {
+    background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/c_crop/v1490337695/PaulGoldmanMainCROPPED_MOBILE.jpg");
+    height: 600px;
+  }
+  
+  #my-cal iframe{
+    /* SWITCH TO AGENDA VIEW FOR SMALL VIEWPORTS */
+    src: "https://www.google.com";
+  }
 }
+
+// @media screen and (min-height: 1000;)
 .vertical-center {
     display: -webkit-box;
     display: -moz-box;
