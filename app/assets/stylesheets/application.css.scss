@@ -40,7 +40,7 @@
 .jumbotron {
     
     /* ORIGINAL IMAGE */
-    background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/o_29/v1485288226/psalm4.png");
+    // background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/o_29/v1485288226/psalm4.png");
     background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/o_31/v1485288220/recital_hands_azqtcm.png");
     background-attachment: fixed;
     background-repeat: none;
@@ -48,18 +48,12 @@
 
     height: 20%;
     max-height: 300px;
-    // width: 80%;
-    // opacity: 0.80;
-    // position: fixed;
-    // border: 3px solid green;
+
     margin-top: 40%;
     margin-bottom: 35%;
     padding: 30px;
     box-shadow: 1px 1px 5px rgb(177,128,42);
-    img {
-      height: 100%;
-      width: 100%;
-    }
+
 }
 
 #home-name {

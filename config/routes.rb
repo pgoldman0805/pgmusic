@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get 'calendar', to:'pages#calendar'
   resources :contacts, only: :create
   get 'contact-paul', to:'contacts#new', as:'new-contact'
-  get 'booking', to:'pages#booking'
+  resources :bookings, only: :create 
+  get 'booking', to:'bookings#new', as: 'new-booking'
   get 'songlist', to: 'pages#songlist'
   get 'photos', to: 'pages#photos'
   get 'video', to: 'pages#video'
