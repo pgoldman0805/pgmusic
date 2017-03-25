@@ -9,8 +9,8 @@
     
     <link href="https://fonts.googleapis.com/css?family=Exo+2|Kanit|Bowlby+One+SC|PT+Serif|Fredericka+the+Great|Signika+Negative|Special+Elite" rel="stylesheet">
     
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all'%>
+    <%= javascript_include_tag 'application'%>
     
     
   </head>
@@ -60,7 +60,6 @@
     </div>
 
     <%= yield %>
-    <%= yield(:body_attributes) %>
     
     <footer>
       <div class="container">
@@ -95,7 +94,6 @@
       </div>
       
     </footer>
-    <script src="https://awesome-table.com/AwesomeTableInclude.js">
   </body>
   
 </html>

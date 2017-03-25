@@ -290,6 +290,10 @@ footer {
   display: inline-block;
 }
 
+/* 
+ *  SMALL DEVICES
+*/
+
 @media screen and (max-width: 414px) and (min-width: 200px){
   p {
     font-size: 12px;
@@ -298,29 +302,23 @@ footer {
     font-size: 30px;
   }
   #footer {
-    // margin-top: -48px;
     margin: 0 auto;
-    // height: 48px;
     height: 20%;
   }
   #footer-social {
     padding: 15px;
   }
   .jumbotron {
-    // max-height: 200px;
     margin-top: 85%;
     background: #eee;
-    // margin-bottom: 30%;
   }
   h1{
     font-size: 20px;
     margin-top: 10%;
-    // color: yellow;
   }
   
   h3{
     font-size: 12px;
-    // color: green;
   }
   #home-name {
     font-size: 24px;
@@ -335,7 +333,7 @@ footer {
   }
 
 }
-@media screen and (min-width:748px) and (max-width:1024px){
+@media screen and (min-width:414px) and (max-width:1024px){
   #home-image {
     background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/c_crop/v1490337695/PaulGoldmanMainCROPPED_MOBILE.jpg");
   }
