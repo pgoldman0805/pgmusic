@@ -71,10 +71,10 @@
           
           <div class="form-group">
             <%= f.label :Event_type %>
-            <% ['Wedding', 'Bar/Bat Mizvah', 'Corporate Event', 'Senior Living', 'Celebration (birthday, anniversary, etc)', 'Other (Please provide details below)'].each do |eventtype| %>
+            <% ['Wedding', 'Bar/Bat Mizvah', 'Corporate Event', 'Senior Living', 'Celebration (birthday, anniversary, etc)', 'Other (Please provide details below)'].each do |etype| %>
               <br>
-              <%= f.radio_button :eventtype, eventtype %>
-              <%= eventtype.humanize %>
+              <%= f.radio_button :eventtype, etype %>
+              <%= etype.humanize %>
               <br>
 
             <% end %>
