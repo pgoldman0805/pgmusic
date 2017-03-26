@@ -5,9 +5,6 @@ class PagesController < ApplicationController
     
     def about
     end
-    
-    def booking
-    end
 
     def calendar
     end
