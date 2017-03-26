@@ -1,39 +1,50 @@
-<div class="container text-center">
-  <h1>Booking TEST</h1>
-  <div id="row">
-    <div class="col-md-6">
+<div class="container">
+  <div class="row">
+    <h1 class="text-center gold-shadow">Booking </h1>
+    <div id="booking-note" class="text-center">
+      <p>
+        <em>** Due to the varying requirements to be considered for each event, it is best to call for an accurate price quote **</em>
+        &emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;<i class="fa fa-phone"></i> <b>847.791.0512</b>
+      </p>
+    </div>
+    <hr>
+    <div class="col-md-6 col-md-offset-3">
       <div class="well">
         <%= form_for "/contacts" do |f| %>
   
-          <div class="form-group">
-            <%= f.label ("First Name") %>
-            <%= f.text_field :fname %>
+          <div class="form-group relative">
+            <%= f.label ("First Name *") %>
+            <%= f.text_field :fname, class:'form-control' %>
+            <!--<i class="fa fa-user form-control-feedback"></i>-->
           </div>
-          <div class="form-group">
-            <%= f.label ("last Name") %>
-            <%= f.text_field :lname %>
+          <div class="form-group relative">
+            <%= f.label ("Last Name *") %>
+            <%= f.text_field :lname, class:'form-control' %>
+            <!--<i class="fa fa-user form-control-feedback"></i>-->
           </div>
-          <div class="form-group">
-            <%= f.label ("Phone Number") %>
-            <%= f.text_field :phone %>
+          <div class="form-group relative">
+            <%= f.label ("Phone Number *") %>
+            <%= f.text_field :phone, class:'form-control', placeholder: "###-###-####" %>
+            <!--<i class="fa fa-phone form-control-feedback"></i>-->
           </div>
-          <div class="form-group">
-            <%= f.label :email %>
-            <%= f.text_field :email %>
+          <div class="form-group relative">
+            <%= f.label ("E-mail *") %>
+            <%= f.text_field :email, class:'form-control' %>
+            <!--<i class="fa fa-envelope form-control-feedback"></i>-->
           </div>
           <div class="form-group">
             <%= f.label :company %>
-            <%= f.text_field :company %>
+            <%= f.text_field :company, class:'form-control', placeholder: "(optional)" %>
           </div>
           <div class="form-group">
             <%= f.label :Type %>
-            <%= select_tag(:type, options_for_select([['Wedding',1],['Bar/Bat Mitzvah',2],['Corporate Event',3]])) %>
+            <%= select_tag(:type, options_for_select([['Wedding',1],['Bar/Bat Mitzvah',2],['Corporate Event',3],['Senior Living',4],['Celebration (birthday, anniversary, etc.',5],['Other (Please provide details below)',6]], class:'form-control')) %>
           </div>
           
           
           <div class="form-group">
             <%= f.label :details %>
-            <%= f.text_area :details %>
+            <%= f.text_area :details, style: 'max-width:100%', class:'form-control', placeholder: "Venue, Song Requests, Budget, Theme, etc" %>
           </div>
           <div class="form-group">
             <%= f.submit "Submit", class:'btn btn-default btn-primary' %>
