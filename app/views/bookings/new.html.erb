@@ -5,7 +5,23 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
   $( function() {
-    $( "#date" ).datepicker();
+      $.datepicker.setDefaults({minDate: 0, maxDate: "+24M"});
+      $( "#datepicker" ).datepicker({
+          onSelect: function(dateText, inst) {
+            inst.input.val(dateText);
+            // console.log(dateText);
+            
+          }
+      });
+      // var sample = picker.val();
+      // console.log(sample);
+      // console.log(picker.val());
+            
+      // console.log(picker);
+      // picker.onSelect()
+    // var currentDate = $( "#datepicker" ).datepicker( "getDate" );
+    // if (currentDate == null)
+    //   console.log("TEST");
   } );
 </script>
   
@@ -24,45 +40,53 @@
         
         <%= form_for @bookings do |f| %>
   
-          <div class="form-group relative">
+          <div class="form-group has-feedback">
             <%= f.label ("First Name *") %>
             <%= f.text_field :fname, class:'form-control' %>
-            <!--<i class="fa fa-user form-control-feedback"></i>-->
+            <i class="fa fa-user form-control-feedback"></i>
           </div>
-          <div class="form-group relative">
+          <div class="form-group has-feedback">
             <%= f.label ("Last Name *") %>
             <%= f.text_field :lname, class:'form-control' %>
-            <!--<i class="fa fa-user form-control-feedback"></i>-->
+            <i class="fa fa-user form-control-feedback"></i>
           </div>
-          <div class="form-group relative">
+          <div class="form-group has-feedback">
             <%= f.label ("Phone Number *") %>
             <%= f.text_field :phone, class:'form-control', placeholder: "###-###-####" %>
-            <!--<i class="fa fa-phone form-control-feedback"></i>-->
+            <i class="fa fa-phone form-control-feedback"></i>
           </div>
-          <div class="form-group relative">
+          <div class="form-group has-feedback">
             <%= f.label ("E-mail *") %>
             <%= f.text_field :email, class:'form-control' %>
-            <!--<i class="fa fa-envelope form-control-feedback"></i>-->
+            <i class="fa fa-envelope form-control-feedback"></i>
           </div>
           <div class="form-group relative">
             <%= f.label :company %>
             <%= f.text_field :company, class:'form-control', placeholder: "(optional)" %>
           </div>
           <div class="form-group">
-            <%= f.label :type %>
-            <%= select_tag(:type, options_for_select([['',0],['Wedding',1],['Bar/Bat Mitzvah',2],['Corporate Event',3],['Senior Living',4],['Celebration (birthday, anniversary, etc.',5],['Other (Please provide details below)',6]], class:'form-control')) %>
-          </div>
-          <div class="form-group">
             <%= f.label :date %>
-            
-            <input type="text" id="date" class="form-control" style="width:30%;">
+            <%= f.text_field :date, id: "datepicker", 'data-provide': 'datepicker', style: 'width:50%', class:'form-control', placeholder: "Click here to select a date" %>
           </div>
+          
           <div class="form-group">
+            <%= f.label :event_type %>
+            <% [ 'Wedding', 'Bar/Bat Mizvah', 'Corporate Event', 'Senior Living', 'Celebration (birthday, anniversary, etc)', 'Other (Please provide details below)'].each do |eventtype| %>
+              <br>
+              <%= f.radio_button :eventtype, eventtype %>
+              <%= eventtype.humanize %>
+              <br>
+
+            <% end %>
+
+          </div>
+          
+          <div class="form-group ">
             <%= f.label :details %>
             <%= f.text_area :details, style: 'max-width:100%', class:'form-control', placeholder: "Venue, Song Requests, Budget, Theme, etc" %>
           </div>
           <div class="form-group">
-            <%= f.submit "Submit", class:'btn btn-default btn-primary' %>
+            <%= f.submit "Submit", class:'btn btn-primary btn-block' %>
           </div>
         <% end %>
       </div>

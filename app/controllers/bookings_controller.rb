@@ -16,12 +16,12 @@ class BookingsController < ApplicationController
           phone = params[:booking][:phone]
           email = params[:booking][:email]
           company = params[:booking][:company]
-          type = params[:booking][:type]
+          eventtype = params[:booking][:eventtype]
           date = params[:booking][:date]
           details = params[:booking][:details]
           
           # Plug variables into Contact Mailer email method and send email
-        #   ContactMailer.contact_email(name,email,body).deliver
+          BookingMailer.booking_email(fname,lname,phone,email,company,eventtype,date,details).deliver          
           
           # Store success method into flash hash
           # and redirect to the 'new' action
@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
           
           # If Booking object doesn't save,
           # store errors in Flash hash and redirect to 'new path'
-          flash[:danger] = @booking.errors.full_messages.join("\n")
+          flash[:danger] = @booking.errors.full_messages.join(", ")
          redirect_to new_booking_path
         end
     end
@@ -41,7 +41,7 @@ class BookingsController < ApplicationController
         # To collect data from form, we need to use strong parameters
         # and whitelist form fields
         def booking_params
-         params.require(:booking).permit(:fname, :lname, :phone, :email, :company, :type, :date, :details)
+         params.require(:booking).permit(:fname, :lname, :phone, :email, :company, :eventtype, :date, :details)
         end
     
 end

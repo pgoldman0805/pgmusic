@@ -1,13 +1,13 @@
 class BookingMailer < ActionMailer::Base
     default to: 'paulgoldmanmusic@gmail.com'
     
-    def booking_email(fname, lname, phone, email, company, type, date, details)
+    def booking_email(fname, lname, phone, email, company, eventtype, date, details)
         @fname = fname
         @lname = lname
         @phone = phone
         @email = email
         @company = company
-        @type = type
+        @eventtype = eventtype
         @date = date
         @details = details
         
