@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 20170325191237) do
 
   create_table "bookings", force: :cascade do |t|
-    t.string   "fname", null: false
-    t.string   "lname", null: false
-    t.string   "phone", null: false
-    t.string   "email", null: false
+    t.string   "fname",      null: false
+    t.string   "lname",      null: false
+    t.string   "phone",      null: false
+    t.string   "email",      null: false
     t.string   "company"
     t.string   "eventtype"
     t.string   "date"
@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(version: 20170325191237) do
   end
 
   create_table "contacts", force: :cascade do |t|
-    t.string   "name", null: false
-    t.string   "email", null: false
-    t.text     "comments", null: false
+    t.string   "name",       null: false
+    t.string   "email",      null: false
+    t.text     "comments",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
