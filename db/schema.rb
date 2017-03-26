@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170325191237) do
     t.string   "phone", null: false
     t.string   "email", null: false
     t.string   "company"
-    t.string   "type", null: false
+    t.string   "type"
     t.datetime "date", null: false
     t.text     "details"
     t.datetime "created_at", null: false

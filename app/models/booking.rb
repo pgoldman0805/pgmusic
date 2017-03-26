@@ -4,5 +4,4 @@ class Booking < ActiveRecord::Base
   validates :lname, presence: true
   validates :email, presence: true
   validates :phone, presence: true
-  validates :type, presence: true
 end
