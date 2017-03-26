@@ -6,8 +6,8 @@ class CreateBookings < ActiveRecord::Migration[5.0]
       t.string :phone
       t.string :email
       t.string :company
-      t.string :type
-      t.datetime :date
+      t.string :eventtype
+      t.string :date
       t.text :details
       t.timestamps
     end
