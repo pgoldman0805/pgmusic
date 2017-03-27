@@ -52,24 +52,19 @@
             <i class="fa fa-envelope form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback">
-            <%= f.label :company %>
+            <%= f.label ("Company") %>
             <%= f.text_field :company, class:'form-control', placeholder: "(optional)" %>
             <i class="fa fa-briefcase form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback ">
-            <%= f.label :Event_date %><br>
+            <%= f.label ("Event Date") %><br>
             <%= f.text_field :date, id: "datepicker", 'data-provide': 'datepicker', class: 'has-datepicker form-control', style: 'cursor:pointer;', placeholder: "Click here to select date"%>
             <i class="fa fa-calendar form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback">
-            <%= f.label :Event_type %>
-            <% ['Wedding', 'Bar/Bat Mitzvah', 'Senior Living', 'Corporate', 'Birthday/Anniversary', 'Other (Please provide details below)' ].each do | etype | %>
-              <br>
-              <%= f.radio_button(:eventtype, etype)  %>
-              <%= etype.humanize %>
-            <% end %>
-            <br>
-
+            <%= f.label ("Event type") %>
+            <%= f.text_field :eventtype, class:'form-control', placeholder: "Wedding, Bar/Bat Mitzvah, Corporate, Senior Living, etc." %>
+            <i class="fa fa-birthday-cake form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback">
             <%= f.label :details %>
