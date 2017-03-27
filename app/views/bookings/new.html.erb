@@ -56,7 +56,10 @@
             <%= f.text_field :company, class:'form-control', placeholder: "(optional)" %>
             <i class="fa fa-briefcase form-control-feedback "></i>
           </div>
-          
+          <div class="form-group has-feedback">
+            <%= f.label ("Event Date") %>
+            <%= f.text_field :date, id: 'datepicker', class:'form-control', placeholder: "Click here to select date", style: "{cursor:pointer;}" %>
+          </div>
           <div class="form-group">
             <%= f.label :Event_type %>
             <% ['Wedding', 'Bar/Bat Mizvah', 'Corporate Event', 'Senior Living', 'Celebration (birthday, anniversary, etc)', 'Other (Please provide details below)'].each do |etype| %>
