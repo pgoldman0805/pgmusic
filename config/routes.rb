@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get 'photos', to: 'pages#photos'
   get 'video', to: 'pages#video'
   get 'lessons',to: 'pages#lessons'
+  get 'faq', to: 'pages#faq'
 end
