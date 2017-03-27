@@ -56,7 +56,8 @@
           </div>
           <div class="form-group has-feedback">
             <%= f.label ("Event Date") %>
-            <%= f.text_field :date, id: 'datepicker', class:'form-control', placeholder: "Click here to select date", style: "{cursor:pointer;}" %>
+            <%= f.text_field :date, id: 'datepicker', class:'form-control', style:'cursor:pointer', placeholder: "Click here to select date" %>
+            <i class="fa fa-calendar form-control-feedback "></i>
           </div>
           <div class="form-group">
             <%= f.label :Event_type %>

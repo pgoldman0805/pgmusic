@@ -11,7 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require jquery-ui/datepicker
+ *= require jquery-ui
  *= require rails_bootstrap_forms
  *= require_self
  */
@@ -212,11 +212,11 @@ body {
     color: black;
     font-size: 16px;
     list-style: none;
+    &:hover {
+      text-shadow: 0.25px 0.25px 0.25px #000000;
+    }
 }
 
-#playlist li:hover{
-    text-shadow: 0.25px 0.25px 0.25px #000000;
-}
 #videoarea {
     float: right;
     width: 100%;
@@ -304,9 +304,50 @@ footer {
     top: 0;
 }
 
+/*  FAQ STYLES
+ *
+ */
+ 
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    &:active, &:hover {
+      background-color: #ddd;
+    }
+}
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+button.accordion.active:after {
+    content: "\2212";
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
 /* 
  *  SMALL DEVICES
-*/
+ */
 
 @media screen and (min-width: 200px) and (max-width: 414px){
   p {
