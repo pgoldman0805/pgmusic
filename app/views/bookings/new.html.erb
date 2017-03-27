@@ -28,12 +28,18 @@
 <div class="container">
   <div class="row">
     <h1 class="text-center gold-shadow">Booking </h1>
-    <div id="booking-note" class="text-center">
-      <p>
-        <em>** Due to the varying requirements to be considered for each event, it is best to call for an accurate price quote **</em>
-        &emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;<i class="fa fa-phone"></i> <b>847.791.0512</b>
-      </p>
+    <div class="col-md-6 col-md-offset-3">
+      <div id="booking-note" class="text-center">
+        <p>
+          <em>** Due to the varying requirements to be considered for each event, it is best to call for an accurate price quote **
+          </em>
+        </p>
+        <p>
+          <i class="fa fa-phone"></i> <b>847.791.0512</b>
+        </p>
+      </div>
     </div>
+    
     <hr>
     <div class="col-md-6 col-md-offset-3">
       <div class="well">
@@ -43,32 +49,41 @@
           <div class="form-group has-feedback">
             <%= f.label ("First Name *") %>
             <%= f.text_field :fname, class:'form-control' %>
-            <i class="fa fa-user form-control-feedback"></i>
+            <i class="fa fa-user form-control-feedback gold"></i>
           </div>
           <div class="form-group has-feedback">
             <%= f.label ("Last Name *") %>
             <%= f.text_field :lname, class:'form-control' %>
-            <i class="fa fa-user form-control-feedback"></i>
+            <i class="fa fa-user form-control-feedback gold"></i>
           </div>
           <div class="form-group has-feedback">
             <%= f.label ("Phone Number *") %>
             <%= f.text_field :phone, class:'form-control', placeholder: "###-###-####" %>
-            <i class="fa fa-phone form-control-feedback"></i>
+            <i class="fa fa-phone form-control-feedback gold"></i>
           </div>
           <div class="form-group has-feedback">
             <%= f.label ("E-mail *") %>
             <%= f.text_field :email, class:'form-control' %>
-            <i class="fa fa-envelope form-control-feedback"></i>
+            <i class="fa fa-envelope form-control-feedback gold"></i>
           </div>
-          <div class="form-group relative">
+          <div class="form-group has-feedback">
             <%= f.label :company %>
             <%= f.text_field :company, class:'form-control', placeholder: "(optional)" %>
+            <i class="fa fa-briefcase form-control-feedback gold"></i>
           </div>
-          <div class="form-group">
+          <div class="form-group has-feedback ">
             <%= f.label :date %>
-            <%= f.text_field :date, id: "datepicker", 'data-provide': 'datepicker', style: 'width:50%', class:'form-control', placeholder: "Click here to select a date" %>
+            <%= f.text_field :date, id: "datepicker", 'data-provide': 'datepicker', class: 'has-datepicker ll-skin-cangas', style: 'cursor:pointe;', placeholder: "Click here to select date"%>
           </div>
-          
+          <div class="form-group has-feedback">
+            <%= f.label :Event_type %>
+            <% ['Wedding', 'Bar/Bat Mizvah', 'Corporate Event', 'Senior Living', 'Celebration (birthday, anniversary, etc)', 'Other (Please provide details below)'].each do |etype| %>
+              <br>
+              <%= f.radio_button :eventtype, etype %>
+              <%= etype.humanize %>
+              <br>
+            <% end %>
+          </div>
           <div class="form-group ">
             <%= f.label :details %>
             <%= f.text_area :details, style: 'max-width:100%', class:'form-control', placeholder: "Venue, Song Requests, Budget, Theme, etc" %>
