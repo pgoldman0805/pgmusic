@@ -2,6 +2,7 @@
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<%= stylesheet_link_tag 'cangas.datepicker', media: 'all' %>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
   $( function() {
@@ -9,19 +10,9 @@
       $( "#datepicker" ).datepicker({
           onSelect: function(dateText, inst) {
             inst.input.val(dateText);
-            // console.log(dateText);
             
           }
       });
-      // var sample = picker.val();
-      // console.log(sample);
-      // console.log(picker.val());
-            
-      // console.log(picker);
-      // picker.onSelect()
-    // var currentDate = $( "#datepicker" ).datepicker( "getDate" );
-    // if (currentDate == null)
-    //   console.log("TEST");
   } );
 </script>
   
@@ -31,7 +22,7 @@
     <div class="col-md-6 col-md-offset-3">
       <div id="booking-note" class="text-center">
         <p>
-          <em>** Due to the varying requirements to be considered for each event, it is best to call for an accurate price quote **
+          <em><hr>Due to the varying requirements to be considered for each event, it is best to call for an accurate price quote<hr>
           </em>
         </p>
         <p>
@@ -49,31 +40,32 @@
           <div class="form-group has-feedback">
             <%= f.label ("First Name *") %>
             <%= f.text_field :fname, class:'form-control' %>
-            <i class="fa fa-user form-control-feedback gold"></i>
+            <i class="fa fa-user form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback">
             <%= f.label ("Last Name *") %>
             <%= f.text_field :lname, class:'form-control' %>
-            <i class="fa fa-user form-control-feedback gold"></i>
+            <i class="fa fa-user form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback">
             <%= f.label ("Phone Number *") %>
-            <%= f.text_field :phone, class:'form-control', placeholder: "###-###-####" %>
-            <i class="fa fa-phone form-control-feedback gold"></i>
+            <%= f.text_field :phone, class:'form-control' %>
+            <i class="fa fa-phone form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback">
             <%= f.label ("E-mail *") %>
             <%= f.text_field :email, class:'form-control' %>
-            <i class="fa fa-envelope form-control-feedback gold"></i>
+            <i class="fa fa-envelope form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback">
             <%= f.label :company %>
             <%= f.text_field :company, class:'form-control', placeholder: "(optional)" %>
-            <i class="fa fa-briefcase form-control-feedback gold"></i>
+            <i class="fa fa-briefcase form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback ">
-            <%= f.label :date %>
-            <%= f.text_field :date, id: "datepicker", 'data-provide': 'datepicker', class: 'has-datepicker ll-skin-cangas', style: 'cursor:pointe;', placeholder: "Click here to select date"%>
+            <%= f.label :Event_date %><br>
+            <%= f.text_field :date, id: "datepicker", 'data-provide': 'datepicker', class: 'has-datepicker form-control', style: 'cursor:pointer;', placeholder: "Click here to select date"%>
+            <i class="fa fa-calendar form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback">
             <%= f.label :Event_type %>
@@ -84,9 +76,10 @@
               <br>
             <% end %>
           </div>
-          <div class="form-group ">
+          <div class="form-group has-feedback">
             <%= f.label :details %>
             <%= f.text_area :details, style: 'max-width:100%', class:'form-control', placeholder: "Venue, Song Requests, Budget, Theme, etc" %>
+            <i class="fa fa-comment form-control-feedback "></i>
           </div>
           <div class="form-group">
             <%= f.submit "Submit", class:'btn btn-primary btn-block' %>

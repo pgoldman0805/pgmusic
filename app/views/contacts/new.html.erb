@@ -8,17 +8,22 @@
       <div class="well">
 
               <%= form_for @contacts do |f| %>
-                <div class="form-group">
+                <div class="form-group has-feedback">
                   <%= f.label :name %>
                   <%= f.text_field :name, class:'form-control' %>
+                  <i class="fa fa-user form-control-feedback "></i>
                 </div>
-                <div class="form-group">
+                <div class="form-group has-feedback">
                   <%= f.label :email %>
                   <%= f.text_field :email, class:'form-control' %>
+                  <i class="fa fa-envelope form-control-feedback "></i>
+
                 </div>
-                <div class="form-group">
+                <div class="form-group has-feedback">
                   <%= f.label :comments %>
                   <%= f.text_area :comments, style: 'max-width:100%', class:'form-control' %>
+                  <i class="fa fa-comment form-control-feedback "></i>
+
                 </div>
                 <div class="form-group">
                   <%= f.submit "Submit", class:'btn btn-default btn-primary' %>
