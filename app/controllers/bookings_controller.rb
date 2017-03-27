@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
           
           # Store success method into flash hash
           # and redirect to the 'new' action
-          flash[:success] = "Booking request submitted. Paul will get back to you soon!"
+          flash[:success] = "Booking request submitted."
           redirect_to new_booking_path
         else
           

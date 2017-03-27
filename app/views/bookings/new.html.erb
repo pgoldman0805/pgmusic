@@ -2,17 +2,11 @@
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<%= stylesheet_link_tag 'cangas.datepicker', media: 'all' %>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
   $( function() {
       $.datepicker.setDefaults({minDate: 0, maxDate: "+24M"});
-      $( "#datepicker" ).datepicker({
-          onSelect: function(dateText, inst) {
-            inst.input.val(dateText);
-            
-          }
-      });
+      $( "#datepicker" ).datepicker();
   } );
 </script>
   
@@ -49,7 +43,7 @@
           </div>
           <div class="form-group has-feedback">
             <%= f.label ("Phone Number *") %>
-            <%= f.text_field :phone, class:'form-control' %>
+            <%= f.phone_field :phone, class:'form-control' %>
             <i class="fa fa-phone form-control-feedback "></i>
           </div>
           <div class="form-group has-feedback">
@@ -69,12 +63,13 @@
           </div>
           <div class="form-group has-feedback">
             <%= f.label :Event_type %>
-            <% ['Wedding', 'Bar/Bat Mizvah', 'Corporate Event', 'Senior Living', 'Celebration (birthday, anniversary, etc)', 'Other (Please provide details below)'].each do |etype| %>
+            <% ['Wedding', 'Bar/Bat Mitzvah', 'Senior Living', 'Corporate', 'Birthday/Anniversary', 'Other (Please provide details below)' ].each do | etype | %>
               <br>
-              <%= f.radio_button :eventtype, etype %>
+              <%= f.radio_button(:eventtype, etype)  %>
               <%= etype.humanize %>
-              <br>
             <% end %>
+            <br>
+
           </div>
           <div class="form-group has-feedback">
             <%= f.label :details %>
