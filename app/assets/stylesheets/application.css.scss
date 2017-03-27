@@ -81,7 +81,7 @@
 }
 
 // Typography styles
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: 'Bowlby One SC', sans-serif;
   color: #222222;
   margin-bottom: 44px;
@@ -180,7 +180,7 @@ body {
 }
 
 .about-artist-list {
-  font-family: 'Signika Negative';
+  font-family: 'Signika Negative', sans-serif;
   font-size: 1.1em ;
   list-style-type: square;
   display: inline;
@@ -197,6 +197,9 @@ body {
     text-align: justify;
     
     h3 {
+      font-family: 'Signika Negative', sans-serif;
+      font-weight: bold;
+      text-shadow: none;
       border: none;
       color: #333;
       margin-bottom: 0;
@@ -281,7 +284,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   border: 1px solid gray;
-  font-family: 'Signika Negative';
+  font-family: 'Signika Negative', sans-serif;
   p {
     
   }
@@ -334,6 +337,16 @@ button.accordion:after {
 }
 button.accordion.active:after {
     content: "\2212";
+}
+
+.accordion-question {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: none;
+  margin: 0;
+  border: none;
+  padding: none;
 }
 
 /* Style the accordion panel. Note: hidden by default */

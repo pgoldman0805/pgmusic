@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
           
           # Store success method into flash hash
           # and redirect to the 'new' action
-          flash[:success] = "Booking request submitted."
+          flash[:success] = "Booking request submitted. Please allow 48 hours for a response."
           redirect_to new_booking_path
         else
           
