@@ -57,10 +57,15 @@
             <i class="fa fa-briefcase form-control-feedback "></i>
           </div>
           
-          <div class="form-group has-feedback">
-            <%= f.label ("Event type") %>
-            <%= f.text_field :eventtype, class:'form-control', placeholder: "Wedding, Bar/Bat Mitzvah, Corporate, Senior Living, etc." %>
-            <i class="fa fa-birthday-cake form-control-feedback "></i>
+          <div class="form-group">
+            <%= f.label :Event_type %>
+            <% ['Wedding', 'Bar/Bat Mizvah', 'Corporate Event', 'Senior Living', 'Celebration (birthday, anniversary, etc)', 'Other (Please provide details below)'].each do |etype| %>
+              <br>
+              <%= f.radio_button :eventtype, etype %>
+              <%= etype.humanize %>
+              <br>
+
+            <% end %>
           </div>
           <div class="form-group has-feedback">
             <%= f.label :details %>
