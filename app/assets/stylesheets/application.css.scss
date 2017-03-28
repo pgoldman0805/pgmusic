@@ -171,6 +171,14 @@ body {
   width: 100%;
 }
 
+/* ABOUT PAGE
+ *
+ */
+
+.aboutpage {
+  font-size: 1.2em;
+}
+
 #about-img {
   float: right;
   width: 20%;
@@ -366,15 +374,16 @@ div.panel {
   p {
     font-size: 12px;
   }
-  #footer .fa {
-    font-size: 30px;
-  }
+
   #footer {
     margin: 0 auto;
     height: 20%;
   }
   #footer-social {
     padding: 15px;
+    .fa {
+      font-size: 30px;
+    }
   }
   .jumbotron {
     margin-top: 85%;
@@ -397,6 +406,8 @@ div.panel {
   }
   #home-image {
     background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/v1490459156/DSC_0013bw_c6oxvw_CROPPED_MOBILE.jpg");
+    background-size: cover;
+    background-position: center;
     height: 480px;
   }
 }
