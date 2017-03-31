@@ -246,25 +246,25 @@ body {
 // 	width: 48px;
 	margin: 10px;
 // 	float: left;
-	-webkit-transition: all ease 0.5s;
-	-moz-transition: all ease 0.5s;
-	-o-transition: all ease 0.5s;
-	-ms-transition: all ease 0.5s;
-	transition: all ease 0.5s;
+	-webkit-transition: all ease 0.4s;
+	-moz-transition: all ease 0.4s;
+	-o-transition: all ease 0.4s;
+	-ms-transition: all ease 0.4s;
+	transition: all ease 0.4s;
 }
 .social-popout a {
 
 	width: 100%;
-	text-shadow: 0px 0px 4px 1px rgba(255,255,255,0.8);
-	-webkit-transition: all ease 0.5s;
-	-moz-transition: all ease 0.5s;
-	-o-transition: all ease 0.5s;
-	-ms-transition: all ease 0.5s;
-	transition: all ease 0.5s;
+// 	text-shadow: 0px 0px 4px 1px rgba(255,220,113, 0.);
+	-webkit-transition: all ease 0.4s;
+	-moz-transition: all ease 0.4s;
+	-o-transition: all ease 0.4s;
+	-ms-transition: all ease 0.4s;
+	transition: all ease 0.4s;
 }
 .social-popout a:hover {
 	margin: 0px;
-	text-shadow: 6px 6px 4px 4px rgba(205,205,205,0.3);
+	text-shadow: 6px 6px 4px 4px rgba(255,220,113, 0.8);
 }
 
 footer {
@@ -295,16 +295,10 @@ footer {
 
 #footer-social a {
   text-decoration: none;
-  // color: white;
-  // margin: auto 14px;
-  // height: 100%;
+
   &:hover {
     cursor: pointer;
-    text-shadow: 1px 1px 5px white;
-    // border: 2px solid blue;
-  }
-  .fa {
-    
+    text-shadow: 1px 1px 5px rgba(255,220,113, 1);
   }
 }
 
@@ -316,34 +310,15 @@ footer {
     font-size: 0.5em;
     text-shadow: 1px 1px 10px gold;
   }
-  // font-size: 0.35em;
   letter-spacing: 0.05em;
   a {
     color: #eee;
-    // color: gold;
-    // text-shadow: 1px 1px gold;
   }
   display: inline-block;
 }
 .no-repeat {
   background-repeat: none;
 }
-// .facebook {
-//   border: 2px solid green;
-//   background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/v1490673674/facebook_social_logo.png");
-//   float: left;
-//   // width: 100%;
-// }
-// .twitter {
-//   float: left;
-//   border: 2px solid orange;
-//   background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/v1490674201/twitter_social_logo.png");
-// }
-// .youtube {
-//   float: left;
-//   border: 2px solid silver;
-//   background-image: url("https://res.cloudinary.com/dl4upkour/image/upload/v1490673847/youtube_social_logo.png");
-// }
 
 /*
  *  BOOKING STYLES
