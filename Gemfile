@@ -57,6 +57,11 @@ gem 'google-api-client'
 # Bootstrap form helpers
 gem 'bootstrap_form'
 
+# Until the new API calls are generally available, you must manually specify my fork
+# of the Heroku API gem:
+gem 'platform-api', git: 'https://github.com/jalada/platform-api', branch: 'master'
+
+gem 'letsencrypt-rails-heroku', group: 'production'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

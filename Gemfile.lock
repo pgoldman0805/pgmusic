@@ -1,6 +1,16 @@
+GIT
+  remote: https://github.com/jalada/platform-api
+  revision: 4a06e57bd32d805248f3b8e1358ed4833296c659
+  branch: master
+  specs:
+    platform-api (0.8.0)
+      heroics (~> 0.0.17)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    acme-client (0.4.1)
+      faraday (~> 0.9, >= 0.9.1)
     actioncable (5.0.2)
       actionpack (= 5.0.2)
       nio4r (>= 1.2, < 3.0)
@@ -74,6 +84,7 @@ GEM
     domain_name (0.5.20170223)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
+    excon (0.55.0)
     execjs (2.7.0)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
@@ -99,6 +110,10 @@ GEM
       multi_json (~> 1.11)
       os (~> 0.9)
       signet (~> 0.7)
+    heroics (0.0.21)
+      erubis (~> 2.0)
+      excon
+      multi_json (>= 1.9.2)
     hirb (0.7.3)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -115,6 +130,9 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     jwt (1.5.6)
+    letsencrypt-rails-heroku (1.2.0)
+      acme-client (~> 0.4.0)
+      platform-api
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -251,8 +269,10 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
+  letsencrypt-rails-heroku
   listen (~> 3.0.5)
   pg (= 0.18.4)
+  platform-api!
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
