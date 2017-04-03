@@ -13,6 +13,7 @@
  *= require_tree .
  *= require jquery-ui
  *= require rails_bootstrap_forms
+ *= require fullcalendar
  *= require_self
  */
  
@@ -295,7 +296,6 @@ footer {
 
 #footer-social a {
   text-decoration: none;
-
   &:hover {
     cursor: pointer;
     text-shadow: 1px 1px 5px rgba(255,220,113, 1);

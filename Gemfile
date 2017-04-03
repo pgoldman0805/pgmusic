@@ -53,15 +53,25 @@ gem 'cloudinary'
 
 # Google Calendar API
 gem 'google-api-client'
+gem 'google_calendar', '~> 0.5.1'
+
 
 # Bootstrap form helpers
 gem 'bootstrap_form'
 
+
+
 # Until the new API calls are generally available, you must manually specify my fork
 # of the Heroku API gem:
 gem 'platform-api', git: 'https://github.com/jalada/platform-api', branch: 'master'
-
 gem 'letsencrypt-rails-heroku', group: 'production'
+
+# FullCalendar
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
+# Figaro gem for storing environmental variables
+gem "figaro"
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

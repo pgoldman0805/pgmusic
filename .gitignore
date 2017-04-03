@@ -19,3 +19,12 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore application configuration
+/config/application.yml
+
+# Ignore ENV variables
+config/environment_variables.yml
+
+# Ignore Google client-secret
+/client_secret.json
